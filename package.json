@@ -1,0 +1,27 @@
+{
+  "name": "travelbug",
+  "version": "1.0.0",
+  "description": "A JavaScript module for retrieving music playlists and/or TV shows associated with a particular city, state or country",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TKais/Travelbug.git"
+  },
+  "keywords": [
+    "place",
+    "city",
+    "state",
+    "country",
+    "Spotify",
+    "Guidebox"
+  ],
+  "author": "Tiffany T Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TKais/Travelbug/issues"
+  },
+  "homepage": "https://github.com/TKais/Travelbug#readme"
+}
