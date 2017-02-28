@@ -13,3 +13,5 @@ var Travelbug = (function() {
 	}
 
 })();
+
+module.exports = Travelbug;
