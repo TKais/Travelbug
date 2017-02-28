@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/TKais/Travelbug/issues"
   },
-  "homepage": "https://github.com/TKais/Travelbug#readme"
+  "homepage": "https://github.com/TKais/Travelbug#readme",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
 }
