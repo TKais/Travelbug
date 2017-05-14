@@ -1,7 +1,6 @@
 var request = require('request');
-var async = require('async');
 
-var Travelbug = (function() {
+const Travelbug = ( () => {
 
 	const _buildRequestUrl = (place) => {
 	    const spotifyQuery = 'https://api.spotify.com/v1/search?q=';
@@ -10,10 +9,10 @@ var Travelbug = (function() {
 	    return requestUrl;
 	}
 
-	var getPlaylists = function(place) {
-		var requestUrl = _buildRequestUrl(place);
-		return new Promise( function(resolve, reject) {
-			request(requestUrl, function(error, response, body) {
+	const getPlaylists = (place) => {
+		const requestUrl = _buildRequestUrl(place);
+		return new Promise( (resolve, reject) => {
+			request(requestUrl, (error, response, body) => {
 				if(!error && response.statusCode === 200) {
 					resolve(JSON.parse(body));
 				} else {
