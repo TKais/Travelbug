@@ -1,8 +1,17 @@
 var request = require('request');
+var async = require('async');
 
 var Travelbug = (function() {
 
-	var _makeRequest = function(requestUrl) {
+	const _buildRequestUrl = (place) => {
+	    const spotifyQuery = 'https://api.spotify.com/v1/search?q=';
+	    const spotifyType  = '&type=playlist';
+	    const requestUrl   = spotifyQuery + place + spotifyType;
+	    return requestUrl;
+	}
+
+	var getPlaylists = function(place) {
+		var requestUrl = _buildRequestUrl(place);
 		return new Promise( function(resolve, reject) {
 			request(requestUrl, function(error, response, body) {
 				if(!error && response.statusCode === 200) {
@@ -13,15 +22,7 @@ var Travelbug = (function() {
 			});
 		});
 	};
-	
-	var _sendResponse = function(response) {
-		console.log('RES--->', response);
-		return response;
-	}
 
-	var getPlaylists = function(place) {
-		_makeRequest('https://api.spotify.com/v1/search?q=' + place + '&type=playlist').then(_sendResponse);
-	};
 
 	var getShows = function(place, key) {
 		// console.log(key);
