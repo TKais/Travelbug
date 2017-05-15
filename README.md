@@ -8,12 +8,12 @@ A JavaScript module written in ES6 that exposes two public methods: getPlaylists
 ## Basic Usage
 
 ```javascript
-var Travelbug = require('travelbug');
+const Travelbug = require('travelbug');
 
 /**
 * Travelbug accepts two parameters:
 * @place (string) REQUIRED => A city, state or country
-* @key (string) OPTIONAL => If requesting a TV show, you must provide a Guidebox API key
+* @API_KEY (string) OPTIONAL => If requesting a TV show, you must provide a Guidebox API key
 **/
 
 Travelbug.getPlaylists('Paris').then( (data) => { console.log(data) });

@@ -1,6 +1,6 @@
 {
   "name": "travelbug",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A JavaScript module for retrieving music playlists and/or TV shows associated with a particular city, state or country",
   "main": "app.js",
   "scripts": {
