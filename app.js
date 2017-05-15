@@ -7,8 +7,7 @@ const Travelbug = ( () => {
 	    return requestUrl;
 	}
 
-	const getPlaylists = (place) => {
-		const requestUrl = _buildRequestUrl(place, null, true);
+	const _makeRequest = (requestUrl) => {
 		return new Promise( (resolve, reject) => {
 			request(requestUrl, (error, response, body) => {
 				if(!error && response.statusCode === 200) {
@@ -18,12 +17,19 @@ const Travelbug = ( () => {
 				}
 			});
 		});
+	}
+
+	const getPlaylists = (place) => {
+		const requestUrl = _buildRequestUrl(place, null, true);
+		const musicData = _makeRequest(requestUrl);
+		return musicData;
 	};
 
 
-	var getShows = function(place, apiKey) {
+	const getShows = (place, apiKey) => {
 		const requestUrl = _buildRequestUrl(place, apiKey, false);
-		console.log(requestUrl);
+		const showData = _makeRequest(requestUrl);
+		return showData;
 	};
 
 
