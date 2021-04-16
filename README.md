@@ -1,9 +1,9 @@
 # Travelbug
-A JavaScript module for retrieving music playlists and/or TV shows associated with a particular city, state or country.
+A CommonJS module for retrieving music playlists and/or TV shows associated with a particular city, state or country.
 
 ## Technical Details
 
-A JavaScript module written in ES6 that exposes two public methods: getPlaylists and getShows. Each method returns a Promise, and if they resolve with a 200 status from the server, an array of objects containing the playlists and/or TV shows is returned. 
+A CommonJS module written in ES6 that exposes two public methods: getPlaylists and getShows. Each method returns a Promise, and if they resolve with a 200 status from the server, an array of objects containing the playlists and/or TV shows is returned. 
 
 ## Basic Usage
 
