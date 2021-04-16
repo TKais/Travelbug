@@ -13,7 +13,7 @@ const Travelbug = ( () => {
 				if(!error && response.statusCode === 200) {
 					isSpotify ? resolve(JSON.parse(body).playlists.items) : resolve(JSON.parse(body).results);
 				} else {
-					reject('Could not find any results for ' + place);
+					reject('Error: Could not find any results for ' + place);
 				}
 			});
 		});
