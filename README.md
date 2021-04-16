@@ -1,5 +1,5 @@
 # Travelbug
-A JavaScript module for retrieving music playlists and/or TV shows associated with a particular city, state or country.
+A CommonJS module for retrieving music playlists and/or TV shows associated with a particular city, state or country.
 
 ## Technical Details
 
