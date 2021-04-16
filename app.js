@@ -3,8 +3,8 @@ var request = require('request');
 const Travelbug = ( () => {
 
 	const _buildRequestUrl = (place, apiKey, isSpotify) => {
-	    const requestUrl = isSpotify ? 'https://api.spotify.com/v1/search?q=' + place + '&type=playlist' : 'http://api-public.guidebox.com/v2/shows\?api_key\=' + apiKey + '\&tags\=' + place;
-	    return requestUrl;
+		const requestUrl = isSpotify ? 'https://api.spotify.com/v1/search?q=' + place + '&type=playlist' : 'http://api-public.guidebox.com/v2/shows\?api_key\=' + apiKey + '\&tags\=' + place;
+		return requestUrl;
 	}
 
 	const _makeRequest = (requestUrl, isSpotify) => {
